@@ -33,7 +33,7 @@ const HomePage = ({ addToCart }) => {
             <p className="text-lg font-medium">₹{item.price}</p>
             <button
               onClick={() => handleAddToCart(item)}
-              className="text-sm bg-[#FF9D23] px-5 py-2 rounded-sm hover:bg-[#1D24CA] font-semibold text-white cursor-pointer mt-auto"
+              className="text-sm bg-[#fb641b] px-5 py-2 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer mt-auto"
             >
             <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD TO CART 
             </button>
