@@ -22,14 +22,16 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between bg-[#2874f0] pt-3 pr-12 pb-3 pl-8 items-center sticky top-0">
-        <a href="">
-          <div className="flex items-center gap-2">
-            <img src="./logo-white.svg" className="w-8" />
-            <h1 className="text-white text-xl font-semibold">ShoppyCart</h1>
-          </div>
-        </a>
-        <Cart cartItems={cartItems} setShowModal={setShowModal} />
+      <div className="bg-[#2874f0] sticky top-0 p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <a href="">
+            <div className="flex items-center gap-2">
+              <img src="./logo-white.svg" className="w-8" />
+              <h1 className="text-white text-xl font-semibold">ShoppyCart</h1>
+            </div>
+          </a>
+          <Cart cartItems={cartItems} setShowModal={setShowModal} />
+        </div>
       </div>
       <HomePage addToCart={addToCart} />
       {showModal && (

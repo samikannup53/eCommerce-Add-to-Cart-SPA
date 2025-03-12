@@ -4,13 +4,23 @@ const Model = ({ setShowModal, cartItems, removeFromCart }) => {
       <div className="bg-white p-5 rounded-xl relative">
         <h2 className="text-xl font-bold mb-4 pl-4">Cart Items</h2>
         {cartItems.length === 0 ? (
-          <p className="w-100 h-20 text-center mt-8">Your Cart is Empty !</p>
+          <div className="flex flex-col items-center justify-center gap-4 w-[70vw] max-w-[1000px] h-[60vh] border-t-2 border-gray-300">
+            <img src="/empty-cart-image.png" className="w-48 mr-3" />
+            <p className="text-center text-lg">Your Cart is Empty!</p>
+            <p className="text-center text-[12px] -mt-3">Add Items to it Now.</p>
+            <button
+                onClick={() => setShowModal(false)}
+                className="text-sm bg-[#fb641b] px-5 py-2 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer"
+              >
+                <i class="fa-solid fa-cart-shopping"></i> &nbsp; SHOPE NOW
+              </button>
+          </div>
         ) : (
-          <div className="space-y-3 overflow-y-scroll h max-h-[60vh] w-[50vw] pr-10 pl-4">
+          <div className="space-y-8 overflow-y-scroll max-h-[60vh] w-[70vw] max-w-[1000px] pr-10 pl-4 border-t-2 border-gray-300 py-8">
             {cartItems.map((item, index) => (
               <div key={index} className="flex items-center gap-6 py-2">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 flex items-center">
+                  <div className="w-18 h-18 flex items-center">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -18,15 +28,15 @@ const Model = ({ setShowModal, cartItems, removeFromCart }) => {
                     />
                   </div>
                   <div>
-                  <p className="w-100">{item.title}</p>
-                  <p>{item.price}</p>
+                    <p className="w-100">{item.title}</p>
+                    <p>{item.price}</p>
                   </div>
                 </div>
                 <button
                   onClick={() => removeFromCart(item.id)}
-                  className=" text-sm font-bold ml-auto"
+                  className=" text-sm font-bold ml-auto cursor-pointer  hover:text-[#2455f4] "
                 >
-                  Remove
+                  REMOVE
                 </button>
               </div>
             ))}
