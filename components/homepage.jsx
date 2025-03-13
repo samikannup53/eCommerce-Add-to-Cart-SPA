@@ -30,8 +30,8 @@ const HomePage = ({ addToCart }) => {
               />
             </div>
             <div className="flex flex-col items-center flex-grow text-center space-y-3 mt-3">
-              <h1 className="font-bold text-xl">{item.title}</h1>
-              <p className="text-lg font-medium">₹{item.price}</p>
+              <h1 className="font-semibold text-[17px] text-gray-900">{item.title}</h1>
+              <p className="text-lg font-bold text-[19px] text-gray-800">₹ &nbsp;{item.price}</p>
               <button
                 onClick={() => handleAddToCart(item)}
                 className="text-sm bg-[#fb641b] px-5 py-2 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer mt-auto"

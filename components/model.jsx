@@ -18,8 +18,8 @@ const Model = ({ setShowModal, cartItems, removeFromCart }) => {
         ) : (
           <div className="space-y-8 overflow-y-scroll max-h-[60vh] w-[70vw] max-w-[1000px] pr-10 pl-4 border-t-2 border-gray-300 py-8">
             {cartItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-6 py-2">
-                <div className="flex items-center gap-4">
+              <div key={index} className="flex flex-col sm:flex-row items-center py-2">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="w-18 h-18 flex items-center">
                     <img
                       src={item.image}
@@ -28,14 +28,14 @@ const Model = ({ setShowModal, cartItems, removeFromCart }) => {
                     />
                   </div>
                   <div>
-                    <p className="w-100">{item.title}</p>
-                    <p>{item.price}</p>
+                    <p className="w-full text-[17px] text-center sm:text-left sm:w-70 lg:w-100">{item.title}</p>
+                    <p className="text-center text-[18px] sm:text-left text-gray-700 font-semibold py-3 sm:py-0">₹&nbsp;{item.price}</p>
                   </div>
                 </div>
                 <button
                   onClick={() => removeFromCart(item.id)}
-                  className=" text-sm font-bold ml-auto cursor-pointer  hover:text-[#2455f4] "
-                >
+                  className=" text-sm font-bold sm:ml-auto cursor-pointer text-gray-800  hover:text-[#2455f4] border-[1px] border-gray-800 hover:border-[#2455f4] rounded-sm pl-2 pr-3 py-1 "
+                ><i class="bi bi-trash"></i>&nbsp;
                   REMOVE
                 </button>
               </div>
