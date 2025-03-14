@@ -1,4 +1,5 @@
 ## **ShoppyCart**
+Responsive and Dynamic eCommerce Add to Cart Single Page Application.
 
 ## Features
 #### 1. Product Display
