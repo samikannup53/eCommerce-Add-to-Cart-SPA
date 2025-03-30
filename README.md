@@ -1,7 +1,7 @@
-## **ShoppyCart**
+## **ShoppyCart 🛒**
 Responsive and Dynamic eCommerce Add to Cart Single Page Application.
 
-## Features
+## Features 💫
 #### 1. Product Display
 Fetching and Displaying a list of products from the Fake Store API.
 Each Product Card shows Key Information's such as:
@@ -33,12 +33,14 @@ A clean and user-friendly layout ensures a consistent user experience on various
 - Tailwind CSS
 - Javascript
 
-## Deployed - URL
-https://sami-shoppycart.netlify.app/
+## Deployed - URL 🌐
+<p>https://sami-shoppycart.netlify.app/</p>
+
+<br>
 
 ## Project Configurations
 
-### React Project Creation
+### React Project Creation with Vite Building Tool
 ```bash
  npm create vite@latest
 
